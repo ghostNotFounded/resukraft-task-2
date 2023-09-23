@@ -1,4 +1,4 @@
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { useContext } from "react";
 import { ResumeContext } from "../context/resumeContext";
 
@@ -38,7 +38,7 @@ const Contacts = () => {
     }
   };
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5 max-w-[600px]">
         <p className="text-4xl font-semibold">
           How would you like to be{" "}
@@ -67,7 +67,7 @@ const Contacts = () => {
           value={resumeContext?.resume?.email}
         />
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

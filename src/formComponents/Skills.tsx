@@ -1,5 +1,5 @@
-import { Appear } from "../animations/appear";
-import { useContext, useRef, useState } from "react";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
+import { useContext, useState } from "react";
 import { ResumeContext } from "../context/resumeContext";
 import { TrashIcon } from "@heroicons/react/24/solid";
 
@@ -31,6 +31,7 @@ const Skills = () => {
   };
 
   const removeSkill = (skill: string) => {
+    // @ts-ignore
     const removedArr = [...resumeContext?.skills].filter(
       (currSkill) => currSkill !== skill
     );
@@ -39,7 +40,7 @@ const Skills = () => {
   };
 
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5 w-[600px]">
         <p className="text-4xl font-semibold max-w-[600px]">
           What are some of your <span className="text-customBlue">skills</span>?
@@ -78,7 +79,7 @@ const Skills = () => {
           })}
         </div>
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

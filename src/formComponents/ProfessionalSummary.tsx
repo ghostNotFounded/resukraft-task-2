@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { ResumeContext } from "../context/resumeContext";
 
 const ProfessionalSummary = () => {
   const resumeContext = useContext(ResumeContext);
-  const updateSummary = (e) => {
+  const updateSummary = (e: any) => {
     if (resumeContext) {
       resumeContext.setResume({
         name: resumeContext?.resume?.name,
@@ -17,7 +17,7 @@ const ProfessionalSummary = () => {
   };
 
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5">
         <p className="text-4xl font-semibold max-w-[600px]">
           Give us a custom{" "}
@@ -35,7 +35,7 @@ const ProfessionalSummary = () => {
           maxLength={300}
         ></textarea>
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

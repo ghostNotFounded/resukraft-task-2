@@ -1,4 +1,4 @@
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { useContext, useRef, useState } from "react";
 import { ResumeContext } from "../context/resumeContext";
 import { TrashIcon } from "@heroicons/react/24/solid";
@@ -41,7 +41,7 @@ const Affiliations = () => {
   };
 
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5 w-[600px]">
         <p className="text-4xl font-semibold max-w-[600px]">
           What are some of your{" "}
@@ -82,7 +82,7 @@ const Affiliations = () => {
           })}
         </div>
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

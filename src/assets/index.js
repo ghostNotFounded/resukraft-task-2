@@ -1,7 +1,7 @@
 import logo from './Logo.png';
 import resume from './resume.jpg'
 
-export {
+export default {
     logo,
     resume
 };

@@ -1,10 +1,10 @@
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { useContext } from "react";
 import { ResumeContext } from "../context/resumeContext";
 
 const Name = () => {
   const resumeContext = useContext(ResumeContext);
-  const updateName = (e) => {
+  const updateName = (e: any) => {
     if (resumeContext) {
       resumeContext.setResume({
         name: e.target.value.toUpperCase(),
@@ -16,7 +16,7 @@ const Name = () => {
     }
   };
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5">
         <p className="text-4xl font-semibold max-w-[600px]">
           Hey! Tell us more about you so we can complete your{" "}
@@ -30,7 +30,7 @@ const Name = () => {
           value={resumeContext?.resume?.name}
         />
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

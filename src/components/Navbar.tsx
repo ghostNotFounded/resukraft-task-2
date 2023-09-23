@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { logo } from "../assets";
+import logo from "../assets/Logo.png";
 
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 

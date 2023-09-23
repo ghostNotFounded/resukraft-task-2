@@ -1,4 +1,4 @@
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { useContext, useRef, useState } from "react";
 import { ResumeContext } from "../context/resumeContext";
 import { TrashIcon } from "@heroicons/react/24/solid";
@@ -24,6 +24,7 @@ const Education = () => {
 
     if (inputLevel.trim().length !== 0) {
       const newEducation = [
+        // @ts-ignore
         ...resumeContext?.Education,
         [
           inputLevel.replace(/^\w/, (c) => c.toUpperCase()),
@@ -37,6 +38,7 @@ const Education = () => {
   };
 
   const removeEducation = (Education: string) => {
+    // @ts-ignore
     const removedArr = [...resumeContext?.Education].filter(
       (currEducation) => currEducation !== Education
     );
@@ -45,7 +47,7 @@ const Education = () => {
   };
 
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5 w-[600px]">
         <p className="text-4xl font-semibold max-w-[600px]">
           Tell us about your <span className="text-customBlue">education</span>?
@@ -75,17 +77,16 @@ const Education = () => {
           </button>
         </form>
         <div className="max-h-[250px] overflow-y-auto space-y-5 pr-5">
-          {resumeContext?.Education?.map((Education, i) => {
+          {resumeContext?.Education?.map((edu, i) => {
             return i === 0 ? (
               ""
             ) : (
               <p
                 className="rounded-full bg-slate-200 dark:bg-slate-800 px-6 py-2 flex justify-between"
                 key={i}
-                id={Education}
               >
-                <span className="font-bold">{Education[0]}</span> {Education[1]}
-                <button onClick={() => removeEducation(Education)}>
+                <span className="font-bold">{edu[0]}</span> {edu[1]}
+                <button onClick={() => removeEducation(edu[0])}>
                   <TrashIcon className="w-5 h-5" />
                 </button>
               </p>
@@ -93,7 +94,7 @@ const Education = () => {
           })}
         </div>
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 

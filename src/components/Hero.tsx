@@ -1,6 +1,6 @@
 import Button from "./Button";
-import { resume } from "../assets";
-import { Appear } from "../animations/appear.js";
+import resume from "../assets/resume.jpg";
+import { AnimatedAppear } from "../animations/AnimatedAppear.js";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -25,9 +25,9 @@ const Hero = () => {
         </Link>
       </div>
       <div className="mt-5 md:w-1/2 w-full dark:drop-shadow-2xl drop-shadow-none relative">
-        <Appear>
+        <AnimatedAppear>
           <img src={resume} />
-        </Appear>
+        </AnimatedAppear>
         <div className="absolute w-[120%] z-[-1] h-full top-0 dark:opacity-100 opacity-80 blue__gradient" />
         <div className="absolute w-[12%] z-[-1] h-full top-0 dark:opacity-100 opacity-80 pink__gradient" />
       </div>

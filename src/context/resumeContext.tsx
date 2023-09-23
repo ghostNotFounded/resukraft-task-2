@@ -1,11 +1,11 @@
 import { useState, createContext } from "react";
 
 export type ResumeInfo = {
-  name: string;
-  professionalSummary: string;
-  location: string;
-  phone: number;
-  email: string;
+  name: string | undefined;
+  professionalSummary: string | undefined;
+  location: string | undefined;
+  phone: number | undefined;
+  email: string | undefined;
 };
 
 type resumeContextType = {

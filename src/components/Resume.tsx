@@ -33,7 +33,7 @@ const Resume = () => {
                 return i === 0 ? (
                   ""
                 ) : (
-                  <li key={exp[0]}>
+                  <li key={i}>
                     <h1>
                       <span className="font-bold">{exp[0]}</span>, {exp[1]} -{" "}
                       {exp[2]}

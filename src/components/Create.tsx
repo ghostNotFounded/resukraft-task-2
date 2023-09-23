@@ -31,9 +31,10 @@ const Create = () => {
     }
   };
 
-  const pdfRef = useRef();
+  const pdfRef = useRef(null);
   const downloadPDF = () => {
     const input = pdfRef.current;
+    // @ts-ignore
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("img/png");
       const pdf = new jsPDF("p", "mm", "a4", true);

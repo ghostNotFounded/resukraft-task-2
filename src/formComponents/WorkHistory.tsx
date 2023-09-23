@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Appear } from "../animations/appear";
+import { AnimatedAppear } from "../animations/AnimatedAppear";
 import { ResumeContext } from "../context/resumeContext";
 
 const WorkHistory = () => {
@@ -53,7 +53,7 @@ const WorkHistory = () => {
   // };
 
   return (
-    <Appear>
+    <AnimatedAppear>
       <div className="space-y-5 max-w-[600px]">
         <p className="text-4xl font-semibold max-w-[620px]">
           Tell us more about your{" "}
@@ -138,7 +138,7 @@ const WorkHistory = () => {
           </button>
         </form>
       </div>
-    </Appear>
+    </AnimatedAppear>
   );
 };
 
